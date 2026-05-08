@@ -1,4 +1,4 @@
-import type { Bus, BusRoute, LiveLocation } from '../types'
+import type { Bus, BusRoute } from '../types'
 import { motion } from 'framer-motion'
 import { BusFront, Navigation } from 'lucide-react'
 
@@ -6,12 +6,11 @@ import type { BusProgress } from '../hooks/useBusProgress'
 
 interface Props {
   route: BusRoute
-  live: LiveLocation
   bus: Bus
   progressData: BusProgress
 }
 
-export function LiveTimeline({ route, live, bus, progressData }: Props) {
+export function LiveTimeline({ route, bus, progressData }: Props) {
   const { currentStopIndex, nextStopIndex, segmentProgress, isActive } = progressData;
   
   let busTopPercentage = 0

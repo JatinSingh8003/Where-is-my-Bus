@@ -64,7 +64,7 @@ export function LiveTrackingPage() {
 
         {/* Scrollable Timeline Area */}
         <div className="flex-1 overflow-y-auto custom-scrollbar p-4 relative bg-slate-900">
-           <LiveTimeline route={route} live={live} bus={bus} progressData={progressData} />
+           <LiveTimeline route={route} bus={bus} progressData={progressData} />
         </div>
       </section>
     </motion.main>
