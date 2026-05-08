@@ -11,6 +11,7 @@ import { LiveTrackingPage } from './pages/LiveTrackingPage'
 import { DriverDashboardPage } from './pages/DriverDashboardPage'
 import { AdminDashboardPage } from './pages/AdminDashboardPage'
 import { MapBackground } from './components/MapBackground'
+import { AIChatBot } from './components/AIChatBot'
 
 function Protected({ children }: { children: ReactElement }) {
   const { user } = useAuth()
@@ -42,6 +43,7 @@ export default function App() {
           </Routes>
         </AnimatePresence>
       </main>
+      <AIChatBot />
     </div>
   )
 }
