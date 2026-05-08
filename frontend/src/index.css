@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6; /* Blue 500 */
+  --color-primary-glow: rgba(59, 130, 246, 0.5);
+  --color-accent: #8b5cf6; /* Violet 500 */
+  --color-accent-glow: rgba(139, 92, 246, 0.5);
+  --color-dark-glass: rgba(15, 23, 42, 0.65);
+  --color-dark-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #e2e8f0;
+  background: #020617;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #020617; /* Fallback for the map */
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass {
+  background: var(--color-dark-glass);
+  border: 1px solid var(--color-dark-glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(30,41,59,0.7) 0%, rgba(15,23,42,0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle, rgba(2,6,23,0) 40%, rgba(2,6,23,0.9) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Leaflet Override for Dark Theme */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  backdrop-filter: blur(8px);
+}
+.leaflet-popup-tip {
+  box-shadow: none !important;
+}
